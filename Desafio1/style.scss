@@ -1,0 +1,55 @@
+@mixin set-colors($primary-color, $color) {
+    color: $color;
+    background-color: $primary-color;
+    border: 1px solid $color;
+    
+}
+
+
+$font-stack: Arial, Helvetica, sans-serif;
+
+$primary-color: #e5ccb3;
+
+$color:#333;
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: $font-stack;
+    line-height: 1.6;
+}
+
+header{
+    @include set-colors($primary-color, $color);
+    height: 600px;
+}
+
+header .content{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.content h1{
+    font-size: 50px;
+    line-height: 1.2;
+}
+
+header .container img {
+    width: 50%;
+}
+.container {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+
+
+
+
